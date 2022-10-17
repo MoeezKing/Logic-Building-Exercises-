@@ -1,0 +1,21 @@
+#include <iostream>
+#include<cmath>
+using namespace std;
+int reverseInteger(int num)
+{
+    int newInteger=num%10;
+    num=num/10;
+    while(num!=0)
+    {
+        newInteger=newInteger*10;
+        newInteger=newInteger+(num%10);
+        num=num/10;
+    }
+    return newInteger;
+}
+int main()
+{
+    cout<<"Reverse of 123456789 is "<<reverseInteger(123456789);
+
+    return 0;
+}
